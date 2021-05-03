@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <!-- path is relative to assets folder as we name assets as static in index.js file -->
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <section id="form">
+        <div id="head">
+            <h1>TODO LIST</h1>
+        </div>
+        <div id="form2">
+            <form action="/add_task" method="POST">
+                <div style="width: 100%;">
+                    <label for="discription">Description of task</label>
+                    <input type="text" name="discription" id="disc" class="lh bb">
+                </div>
+                <div id="col">
+                    <div>
+                        <label for="category">Category</label>
+                        <select name="category" id="category" class="lh bb noOutline">
+                            <option value="work">work</option>
+                            <option value="home">home</option>
+                            <option value="study">study</option>
+                            <option value="general">general</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date">Due Date</label>
+                        <input type="date" name="date" class="lh bb wide">
+                    </div>
+                </div>
+
+                <div id="btn">
+                    <button type="submit" class="btn1 blue_back">Add Task</button>
+                    <button type="submit" class="btn1 red_back">Delete Task</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="list">
+        <ul id="task_list">
+            <% for(let task of task_list){ %>
+                <li class="item">
+                    <div id="task_left">
+                        <input type="checkbox" name="completed">
+                        <div id="task_detail" class="large">
+                            <%= task.description %>
+                                <%= task.date %>
+                        </div>
+                    </div>
+                    <div id="task_type">
+                        <h6>
+                            <%= task.type %>
+                        </h6>
+                    </div>
+                </li>
+                <%}%>
+        </ul>
+    </section>
+</body>
+
+</html>

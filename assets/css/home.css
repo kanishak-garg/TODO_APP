@@ -1,0 +1,139 @@
+
+.lh{
+    line-height: 2rem;
+}
+
+.bb{
+    border:0px;
+    border-bottom: 2px solid black;
+}
+.large{
+    font-size: 2rem;
+}
+label{
+    font-size: 1.5rem;
+}
+
+input[type=checkbox]{
+    width:1.5rem;
+    height: 1.5rem;
+    margin:10px;
+}
+
+#form{
+    width: 50%;
+    margin: auto;
+     padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#disc{
+    width:80%;
+    padding: 5px;
+    line-height: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+form *{
+    padding:0px 10px;
+    margin:10px 0px;
+}
+
+
+input:focus,.noOutline:focus{
+    outline: none;
+}
+
+input,select{
+    font-size: large;
+} 
+
+select, .wide{
+    width: 100%;
+    padding: 10px;
+}
+
+select option{
+    padding:10px;
+    font-size: large;
+
+}
+#col{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#btn{
+    width:60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.btn1{
+    height: 50px;
+    width: 45%;
+    font-size: large;
+    color: white;
+}
+
+.blue_back{
+    background-color:forestgreen;
+}
+.red_back{
+    background-color: red;
+}
+
+#task_list{
+    text-decoration: none;
+    width: 60%;
+    margin: auto;   
+}
+.item{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid lightgray;
+    margin-top: 20px;
+}
+
+#task_left{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+#task_type{
+    font-size: 2rem;
+    height: 100%;
+    width: 140px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h6{
+    color:white;
+    font-size: 1.4rem;
+    margin:0px;
+}
