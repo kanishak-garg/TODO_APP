@@ -11,59 +11,66 @@
 </head>
 
 <body>
-    <section id="form">
-        <div id="head">
-            <h1>TODO LIST</h1>
-        </div>
-        <div id="form2">
-            <form action="/add_task" method="POST">
-                <div style="width: 100%;">
-                    <label for="discription">Description of task</label>
-                    <input type="text" name="discription" id="disc" class="lh bb">
-                </div>
-                <div id="col">
-                    <div>
-                        <label for="category">Category</label>
-                        <select name="category" id="category" class="lh bb noOutline">
-                            <option value="work">work</option>
-                            <option value="home">home</option>
-                            <option value="study">study</option>
-                            <option value="general">general</option>
-                        </select>
+    <section id="outer">
+        <section id="form">
+            <div id="head">
+                <h1 style="font-size: 2rem;">TODO LIST</h1>
+            </div>
+            <div id="form2">
+                <form action="/add_task" method="POST">
+                    <div style="width: 100%;">
+                        <label for="discription">Description of task</label>
+                        <input type="text" name="description" id="disc" class="lh bb"
+                            placeholder="enter the work want to do" required>
                     </div>
-                    <div>
-                        <label for="date">Due Date</label>
-                        <input type="date" name="date" class="lh bb wide">
-                    </div>
-                </div>
-
-                <div id="btn">
-                    <button type="submit" class="btn1 blue_back">Add Task</button>
-                    <button type="submit" class="btn1 red_back">Delete Task</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <section id="list">
-        <ul id="task_list">
-            <% for(let task of task_list){ %>
-                <li class="item">
-                    <div id="task_left">
-                        <input type="checkbox" name="completed">
-                        <div id="task_detail" class="large">
-                            <%= task.description %>
-                                <%= task.date %>
+                    <div id="col">
+                        <div>
+                            <label for="category">Category</label>
+                            <select name="category" id="category" class="lh bb noOutline" required>
+                                <option value="">choose a category</option>
+                                <option value="work">work</option>
+                                <option value="home">home</option>
+                                <option value="study">study</option>
+                                <option value="general">general</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date">Due Date</label>
+                            <input type="date" name="date" class="lh bb wide" required>
                         </div>
                     </div>
-                    <div id="task_type">
-                        <h6>
-                            <%= task.type %>
-                        </h6>
+                    <div id="btn">
+                        <button type="submit" class="btn1 blue_back">Add Task</button>
                     </div>
-                </li>
-                <%}%>
-        </ul>
+                </form>
+            </div>
+        </section>
+
+        <section id="list">
+            <form action="/delete_task" method="POST">
+                <button type="submit" class="btn1 red_back">Delete Selected Tasks</button>
+                <ul id="task_list">
+                    <% for(let task of task_list){ %>
+                        <li class="item">
+                            <div id="task_left">
+                                <input type="checkbox" class="box" name="completed" value=<%=task._id%>>
+                                <label for="completed">
+                                    <div id="task_detail" class="large">
+                                        <%= task.description %> <br>
+                                            Due on : <%=task.dueDate %>
+                                    </div>
+                                </label>
+                            </div>
+                            <div id="task_type">
+                                <h6>
+                                    <%= task.category%>
+                                </h6>
+                            </div>
+                        </li>
+                        <%}%>
+                </ul>
+            </form>
+        </section>
     </section>
 </body>
 
