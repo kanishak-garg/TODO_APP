@@ -17,7 +17,7 @@
                 <h1 style="font-size: 2rem;">TODO LIST</h1>
             </div>
             <div id="form2">
-                <form action="/add_task" method="POST">
+                <form action="/add_task" onsubmit="Handler()" method="POST">
                     <div style="width: 100%;">
                         <label for="discription">Description of task</label>
                         <input type="text" name="description" id="disc" class="lh bb"
@@ -72,6 +72,8 @@
             </form>
         </section>
     </section>
+
+    <!-- <script src="/js/home.js"></script> -->
 </body>
 
 </html>

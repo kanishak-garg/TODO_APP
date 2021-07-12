@@ -146,7 +146,7 @@ select option{
     width: 120px;
     margin-right: 30x;
     height: 100px;
-    background-color:darkcyan;
+    background-color: darkcyan;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,3 +167,4 @@ input.box{
     width:30px;
     height:30px;
 }
+
