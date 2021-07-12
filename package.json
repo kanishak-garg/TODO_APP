@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a todo app",
   "main": "index.js",
+  "engines":{
+    "node":"14.16.1",
+    "npm":"6.14.12"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

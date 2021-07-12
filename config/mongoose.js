@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost:27017/todo_db');
+const MONGODB_URL = process.env.MONGODB_URL;
+mongoose.connect(
+    MONGODB_URL,
+    { 
+        useUnifiedTopology: true 
+    });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'error connecting to db'));
