@@ -1,5 +1,5 @@
 const express = require('express');
-const port =process.env.PORT || 8000;
+const port = 8000;
 const db = require('./config/mongoose');
 const { findOneAndDelete } = require('./models/todo');
 const Todo = require('./models/todo');
