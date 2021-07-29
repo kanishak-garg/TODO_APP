@@ -9,3 +9,10 @@ It is made using Node.js, Express.js, MongoDB.
 - todo's stored in database
 - see todos in list view
 - mark todo as completed
+
+
+## Project images
+
+![](assets/img/todo_app.PNG)
+![](assets/img/todo_app_2.PNG)
+![](assets/img/todo_app_3.PNG)
