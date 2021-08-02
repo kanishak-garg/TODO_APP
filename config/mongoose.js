@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const MONGODB_URL = 'mongodb://localhost/todo_db';
+
+//'mongodb://localhost/todo_db'
+const MONGODB_URL = process.env.DB_URL;
 mongoose.connect(
     MONGODB_URL,
     { 
