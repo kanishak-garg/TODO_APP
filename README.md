@@ -2,6 +2,7 @@
 It is a TODO APP where user can add their tasks/todo's. 
 It is made using Node.js, Express.js, MongoDB.
 
+**[VISIT WEBSITE](https://kanishak-todo-app2.herokuapp.com/)**
 
 ##features
 - add a todo
@@ -9,6 +10,8 @@ It is made using Node.js, Express.js, MongoDB.
 - todo's stored in database
 - see todos in list view
 - mark todo as completed
+
+
 
 
 ## Project images
