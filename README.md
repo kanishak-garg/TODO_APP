@@ -4,6 +4,11 @@ It is made using Node.js, Express.js, MongoDB.
 
 **[VISIT WEBSITE](https://kanishak-todo-app2.herokuapp.com/)**
 
+##How to run
+- clone/download the project from github
+- npm install
+- npm start or npm run index.js
+
 ##features
 - add a todo
 - remove a todo
